@@ -6,3 +6,7 @@ Work log
 - Detailed mathematical analysis of Costas loop
 - Work division between group members
 
+14- 09-2026: Abhinand
+- Set up git in local machine
+- Setup a bitstream generator and BPSK mapper(Standard BPSK)
+
