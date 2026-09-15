@@ -10,3 +10,5 @@ Work log
 - Set up git in local machine
 - Setup a bitstream generator and BPSK mapper(Standard BPSK)
 
+15 - 09 -26: Abhinand
+- Built an RRC pulshe shaping filter from scratch
