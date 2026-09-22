@@ -12,3 +12,6 @@ Work log
 
 15 - 09 -26: Abhinand
 - Built an RRC pulshe shaping filter from scratch
+
+21-09-2006 Abhilash
+-Created a function for encoding the payload and crc
