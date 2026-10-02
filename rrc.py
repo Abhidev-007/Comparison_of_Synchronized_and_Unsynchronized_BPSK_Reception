@@ -39,7 +39,7 @@ for i,ti in enumerate(t):
         
         p[i] = (1 / np.sqrt(Tsym)) * (4 * B / np.pi) * (num_term1 + num_term2) / den
 
-shaped_sig = signal.convolve(ov_signal,p,mode='same')
+shaped_sig = signal.convolve(ov_signal,p,mode='full')
 
 #4. AWGN
 snr_range = np.arange(0, 17, 2)
@@ -55,12 +55,12 @@ for snr_db in snr_range:
 #5. Matched Filtering
 g = p[::-1]
 for i in range(len(received_s)):
-    received_s[i] = signal.convolve(received_s[i], g, mode='same')
+    received_s[i] = signal.convolve(received_s[i], g, mode='full')
 
-# #6. Delay Compensation
-# TD = num_points - 1
-# for i in range(len(received_s)):
-#     received_s[i] = received_s[i][TD+1:]
+#6. Delay Compensation
+TD = num_points - 1
+for i in range(len(received_s)):
+    received_s[i] = received_s[i][TD+1:]
 
 #7. Downsample
 downsampled_sig = []
